@@ -1,38 +1,88 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="24.777" tests="5" skipped="0" failures="0" errors="0">
-<testcase classname="US1006 Kullanici Scenario outline ile birden fazla kelime aratir" name="TC10 Amazon coklu urun testi - Example #1.1" time="11.609">
+<testsuite name="Cucumber" time="19.043" tests="4" skipped="0" failures="1" errors="0">
+<testcase classname="US1007 Scenario Outline ile coklu negative login test" name="TC11 kullanici verilen listedeki kullanici isimleri ile giris yapamamali - Example #1.1" time="6.686">
 <system-out><![CDATA[
-Given kullanici "amazonUrl" anasayfaya gider................................passed
-Then amazonda "Nutella" icin arama yapar....................................passed
-And sonuclarin "Nutella" icerdigini test eder...............................passed
+Given kullanici "qdUrl" anasayfaya gider....................................passed
+Then ilk login linkine tiklar...............................................passed
+And username olarak examples dan "Hasan" girer..............................passed
+And password olarak examples dan "12344" girer..............................passed
+And login butonuna basar....................................................passed
+Then giris yapilamadigini test eder.........................................passed
+And sayfayi kapatir.........................................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="US1006 Kullanici Scenario outline ile birden fazla kelime aratir" name="TC10 Amazon coklu urun testi - Example #1.2" time="5.044">
+<testcase classname="US1007 Scenario Outline ile coklu negative login test" name="TC11 kullanici verilen listedeki kullanici isimleri ile giris yapamamali - Example #1.2" time="5.584">
+<failure type="org.openqa.selenium.ElementClickInterceptedException" message="element click intercepted: Element &lt;button type=&quot;submit&quot; class=&quot;btn red radius-5 mt-4 w-100&quot;&gt;...&lt;/button&gt; is not clickable at point (1050, 541). Other element would receive the click: &lt;p&gt;...&lt;/p&gt;
+  (Session info: chrome=111.0.5563.64)
+Build info: version: '4.8.0', revision: '267030adea'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '12.6.3', java.version: '11.0.18'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [3e7ae6448365d3bf2620f5a6f815cb1b, clickElement {id=26a45968-da15-438d-97a4-770ad6b2ddd2}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.64, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: /var/folders/hr/zj84595n5x1...}, goog:chromeOptions: {debuggerAddress: localhost:52108}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:52108/devtoo..., se:cdpVersion: 111.0.5563.64, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on MAC (3e7ae6448365d3bf2620f5a6f815cb1b)] -&gt; xpath: //button[text()='Login']]
+Session ID: 3e7ae6448365d3bf2620f5a6f815cb1b">
+<![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <button type="submit" class="btn red radius-5 mt-4 w-100">...</button> is not clickable at point (1050, 541). Other element would receive the click: <p>...</p>
+  (Session info: chrome=111.0.5563.64)
+Build info: version: '4.8.0', revision: '267030adea'
+System info: os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '12.6.3', java.version: '11.0.18'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [3e7ae6448365d3bf2620f5a6f815cb1b, clickElement {id=26a45968-da15-438d-97a4-770ad6b2ddd2}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.64, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: /var/folders/hr/zj84595n5x1...}, goog:chromeOptions: {debuggerAddress: localhost:52108}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:52108/devtoo..., se:cdpVersion: 111.0.5563.64, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on MAC (3e7ae6448365d3bf2620f5a6f815cb1b)] -> xpath: //button[text()='Login']]
+Session ID: 3e7ae6448365d3bf2620f5a6f815cb1b
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
+	at com.sun.proxy.$Proxy22.click(Unknown Source)
+	at stepdefinitions.Qdstepdefinitiond.login_butonuna_basar(Qdstepdefinitiond.java:25)
+	at ✽.login butonuna basar(file:///Users/bektas/IdeaProjects/CucumberFrameWork/src/test/resources/features/US1007.feature:11)
+]]>
+</failure>
 <system-out><![CDATA[
-Given kullanici "amazonUrl" anasayfaya gider................................passed
-Then amazonda "Java" icin arama yapar.......................................passed
-And sonuclarin "Java" icerdigini test eder..................................passed
+Given kullanici "qdUrl" anasayfaya gider....................................passed
+Then ilk login linkine tiklar...............................................passed
+And username olarak examples dan "Said" girer...............................passed
+And password olarak examples dan "645363" girer.............................passed
+And login butonuna basar....................................................failed
+Then giris yapilamadigini test eder.........................................skipped
+And sayfayi kapatir.........................................................skipped
 ]]></system-out>
 </testcase>
-<testcase classname="US1006 Kullanici Scenario outline ile birden fazla kelime aratir" name="TC10 Amazon coklu urun testi - Example #1.3" time="2.665">
+<testcase classname="US1007 Scenario Outline ile coklu negative login test" name="TC11 kullanici verilen listedeki kullanici isimleri ile giris yapamamali - Example #1.3" time="1.811">
 <system-out><![CDATA[
-Given kullanici "amazonUrl" anasayfaya gider................................passed
-Then amazonda "Samsung" icin arama yapar....................................passed
-And sonuclarin "Samsung" icerdigini test eder...............................passed
+Given kullanici "qdUrl" anasayfaya gider....................................passed
+Then ilk login linkine tiklar...............................................passed
+And username olarak examples dan "Eyup" girer...............................passed
+And password olarak examples dan "jskdbvk" girer............................passed
+And login butonuna basar....................................................passed
+Then giris yapilamadigini test eder.........................................passed
+And sayfayi kapatir.........................................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="US1006 Kullanici Scenario outline ile birden fazla kelime aratir" name="TC10 Amazon coklu urun testi - Example #1.4" time="2.469">
+<testcase classname="US1007 Scenario Outline ile coklu negative login test" name="TC11 kullanici verilen listedeki kullanici isimleri ile giris yapamamali - Example #1.4" time="4.849">
 <system-out><![CDATA[
-Given kullanici "amazonUrl" anasayfaya gider................................passed
-Then amazonda "Apple" icin arama yapar......................................passed
-And sonuclarin "Apple" icerdigini test eder.................................passed
-]]></system-out>
-</testcase>
-<testcase classname="US1006 Kullanici Scenario outline ile birden fazla kelime aratir" name="TC10 Amazon coklu urun testi - Example #1.5" time="2.898">
-<system-out><![CDATA[
-Given kullanici "amazonUrl" anasayfaya gider................................passed
-Then amazonda "Furkan" icin arama yapar.....................................passed
-And sonuclarin "Furkan" icerdigini test eder................................passed
+Given kullanici "qdUrl" anasayfaya gider....................................passed
+Then ilk login linkine tiklar...............................................passed
+And username olarak examples dan "Fidan" girer..............................passed
+And password olarak examples dan "ytefv86" girer............................passed
+And login butonuna basar....................................................passed
+Then giris yapilamadigini test eder.........................................passed
+And sayfayi kapatir.........................................................passed
 ]]></system-out>
 </testcase>
 </testsuite>
