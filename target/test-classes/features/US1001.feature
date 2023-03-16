@@ -1,4 +1,4 @@
-
+@regression
 
 Feature: US1001 kullanici amazonda arama yapar
 

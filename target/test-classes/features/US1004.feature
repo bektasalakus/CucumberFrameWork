@@ -1,4 +1,4 @@
-
+@regression
 
 Feature: US1004 kullanici parametre olarak girdigi Url'e gider
 

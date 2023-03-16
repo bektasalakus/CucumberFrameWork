@@ -1,4 +1,4 @@
-
+@regression
 
 Feature: US1009 Herokuapp implicitly wait
 

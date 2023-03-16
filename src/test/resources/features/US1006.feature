@@ -1,9 +1,9 @@
 
 
-
+@regression
 Feature: US1006 Kullanici Scenario outline ile birden fazla kelime aratir
 
-
+@ss
   Scenario Outline: TC10 Amazon coklu urun testi
 
     Given kullanici "amazonUrl" anasayfaya gider
